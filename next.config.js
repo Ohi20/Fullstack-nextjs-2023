@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // for external image link
+  images: {
+    domains: ['images.pexels.com'],
+  },
 };
 
 module.exports = nextConfig;
