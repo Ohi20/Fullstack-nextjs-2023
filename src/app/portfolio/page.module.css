@@ -20,10 +20,6 @@
   width: 300px;
   height: 400px;
   position: relative;
-  right: 10px;
-  bottom: 10px;
-  font-size: 40px;
-  font-weight: bold;
   background-size: cover !important;
 }
 
@@ -37,4 +33,16 @@
 
 .item:nth-child(3) {
   background: url('/apps.jpg');
+}
+
+.title {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.item:hover .title {
+  color: #53c28b;
 }
