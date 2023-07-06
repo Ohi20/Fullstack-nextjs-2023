@@ -40,8 +40,6 @@ const Dashboard = () => {
     fetcher
   );
 
-  console.log(data);
-
   return <div className={styles.container}>Dashboard</div>;
 };
 
