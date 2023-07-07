@@ -1,10 +1,11 @@
 'use client';
-
 import Link from 'next/link';
 import React from 'react';
 import styles from './navbar.module.css';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import { signOut, useSession } from 'next-auth/react';
+import Image from 'next/image';
+import logo from 'public/logo.png';
 
 const links = [
   {
@@ -44,9 +45,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.logo}>
-        Casapia
-      </Link>
+      <Image src={logo} alt="hero" className={styles.img} />
       <div className={styles.links}>
         <DarkModeToggle />
         {links.map((link) => (
