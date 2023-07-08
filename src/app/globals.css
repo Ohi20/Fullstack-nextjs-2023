@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   background-color: #001c30;
   color: #bbb;
+  cursor: crosshair;
 }
 
 a {
