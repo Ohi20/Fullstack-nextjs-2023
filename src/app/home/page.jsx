@@ -14,7 +14,10 @@ const HomePage = () => {
           industry.
         </p>
 
-        <Button url="/portfolio" text="See Our Works" />
+        <div className={styles.buttonItems}>
+          <Button url="/blog" text="See Our Blogs" />
+          <Button url="/portfolio" text="See Our Works" />
+        </div>
       </div>
       <div className={styles.item}>
         <Image src={Hero} alt="hero" className={styles.img} />

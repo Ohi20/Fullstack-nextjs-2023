@@ -18,7 +18,7 @@
   left: 20px;
   background-color: #53c28b;
   padding: 5px;
-  color: white;
+  color: #fce9f1;
 }
 
 .textContainer {
@@ -32,6 +32,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.title {
+  color: #53c28b;
 }
 
 .desc {

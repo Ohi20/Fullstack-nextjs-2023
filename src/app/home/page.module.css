@@ -38,3 +38,8 @@
     transform: translateY(10px);
   }
 }
+
+.buttonItems {
+  display: flex;
+  gap: 20px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from 'src/components/Button/Button.jsx';
 
 async function getData() {
   const res = await fetch('http://localhost:3000/api/posts', {
@@ -17,8 +18,12 @@ async function getData() {
 
 const Blog = async () => {
   const data = await getData();
+
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.blogButton}>
+        <Button url="/dashboard" text="Share Your Post" />
+      </div>
       {data.map((item) => (
         <Link
           href={`/blog/${item._id}`}
@@ -34,9 +39,13 @@ const Blog = async () => {
               className={styles.img}
             />
           </div>
-          <div className={styles.content}>
-            <h1 className={styles.title}>{item.title}</h1>
-            <p className={styles.desc}>{item.desc}</p>
+          <div className={styles.contentBox}>
+            <div className={styles.content}>
+              <h1 className={styles.title}>{item.title}</h1>
+              <p className={styles.desc}>{item.desc}</p>
+            </div>
+            <h1 className={styles.username}>Author: {item.username}</h1>
+            <p className={styles.createdAt}>Created At: {item.createdAt}</p>
           </div>
         </Link>
       ))}

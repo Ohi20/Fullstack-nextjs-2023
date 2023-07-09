@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Portfolio = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.selectTitle}>Choose a Galllery</h1>
+      <h1 className={styles.selectTitle}>Choose a Gallery</h1>
       <div className={styles.items}>
         <Link href="/portfolio/illustrations" className={styles.item}>
           <span className={styles.title}>Illustration</span>

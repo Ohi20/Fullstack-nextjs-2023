@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import { notFound } from 'next/navigation';
 
 async function getData(id) {
+  console.log(id);
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     cache: 'no-store',
   });
