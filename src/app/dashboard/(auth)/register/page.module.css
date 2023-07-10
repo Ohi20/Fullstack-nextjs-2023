@@ -33,3 +33,13 @@
   color: #eee;
   font-weight: bold;
 }
+
+.link {
+  text-decoration: underline;
+  color: #7d7c7c;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: rgb(61, 61, 61);
+}

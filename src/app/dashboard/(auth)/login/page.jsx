@@ -4,6 +4,7 @@ import { getProviders, signIn, useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
+import Loading from '../../../../components/Loading/Loading';
 
 const Login = () => {
   const session = useSession();
@@ -18,7 +19,7 @@ const Login = () => {
   }, [params]);
 
   if (session.status === 'loading') {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   if (session.status === 'authenticated') {

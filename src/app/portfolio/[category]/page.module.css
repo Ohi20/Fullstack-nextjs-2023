@@ -1,8 +1,19 @@
 .container {
 }
 
+.catBox {
+  display: flex;
+  justify-content: space-between;
+}
+
 .catTitle {
   color: #53c28b;
+}
+
+.back {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .item {
@@ -23,7 +34,9 @@
 }
 
 .img {
-  object-fit: cover;
+  object-fit: contain;
+  height: 400px;
+  width: 400px;
 }
 
 .content {

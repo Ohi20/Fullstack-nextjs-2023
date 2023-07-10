@@ -77,6 +77,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
+      alert('Delete');
       await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
       });
@@ -85,6 +86,8 @@ const Dashboard = () => {
       console.log(err);
     }
   };
+
+  const handleShow = () => {};
 
   if (session.status === 'authenticated') {
     return (
@@ -101,8 +104,9 @@ const Dashboard = () => {
                   <span
                     className={styles.delete}
                     onClick={() => handleDelete(post._id)}
+                    onMouseEnter={handleShow}
                   >
-                    X
+                    <abbr title="Delete This Post">X</abbr>
                   </span>
                 </div>
               ))}
@@ -118,7 +122,7 @@ const Dashboard = () => {
             cols="30"
             rows="10"
           ></textarea>
-          <button className={styles.button}>Send</button>
+          <button className={styles.button}>Post</button>
         </form>
       </div>
     );
