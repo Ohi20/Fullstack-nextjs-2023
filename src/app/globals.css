@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,7 +14,7 @@ body {
   overflow-x: hidden;
   background-color: #001c30;
   color: #bbb;
-  cursor: pointer;
+  cursor: auto;
 }
 
 a {
