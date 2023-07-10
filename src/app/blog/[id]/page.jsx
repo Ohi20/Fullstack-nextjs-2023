@@ -4,7 +4,6 @@ import styles from './page.module.css';
 import { notFound } from 'next/navigation';
 
 async function getData(id) {
-  console.log(id);
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     cache: 'no-store',
   });
@@ -26,16 +25,17 @@ export async function generateMetadata({ params }) {
 }
 
 const BlogPost = async ({ params }) => {
-  const data = getData(params.id);
+  const data = await getData(params.id);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
           <h1 className={styles.title}>{data.title}</h1>
+          <span className={styles.descTitle}>Description</span>
           <p className={styles.desc}>{data.desc}</p>
           <div className={styles.author}>
             <Image
-              src={data.img}
+              src="https://e7.pngegg.com/pngimages/99/489/png-clipart-computer-icons-user-profile-user-cdr-face.png"
               alt=""
               width={40}
               height={40}
@@ -49,6 +49,7 @@ const BlogPost = async ({ params }) => {
         </div>
       </div>
       <div className={styles.content}>
+        <span className={styles.textTitle}>Content</span>
         <p className={styles.text}>{data.content}</p>
       </div>
     </div>

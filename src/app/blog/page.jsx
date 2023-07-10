@@ -45,7 +45,7 @@ const Blog = async () => {
               <p className={styles.desc}>{item.desc}</p>
             </div>
             <h1 className={styles.username}>Author: {item.username}</h1>
-            <p className={styles.createdAt}>Created At: {item.createdAt}</p>
+            <p className={styles.createdAt}>Created: {item.createdAt}</p>
           </div>
         </Link>
       ))}

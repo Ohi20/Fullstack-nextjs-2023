@@ -21,6 +21,8 @@
 
 .img {
   object-fit: contain;
+  width: 300px;
+  height: 300px;
   animation: move 2s infinite ease alternate;
 }
 
