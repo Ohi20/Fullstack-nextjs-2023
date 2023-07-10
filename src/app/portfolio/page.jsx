@@ -1,20 +1,38 @@
 import React from 'react';
-import styles from './page.module.css';
+// import styles from './page.module.css';
 import Link from 'next/link';
 
 const Portfolio = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.selectTitle}>Choose a Gallery</h1>
-      <div className={styles.items}>
-        <Link href="/portfolio/illustrations" className={styles.item}>
-          <span className={styles.title}>Illustration</span>
+    <div className="flex flex-col mb-10">
+      {/* Title */}
+      <div className="flex justify-center items-center my-10">
+        <h1 className="text-[#53c28b] text-3xl">Choose a Gallery</h1>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 h-screen w-full">
+        <Link
+          href="/portfolio/illustrations"
+          className="border-[#53c28b] rounded-lg  bg-cover bg-[url('/illustration.jpg')] h-full w-full opacity-70"
+        >
+          <span className=" flex justify-center items-center text-5xl text-[#53c28b] font-bold underline decoration-4">
+            Illustration
+          </span>
         </Link>
-        <Link href="/portfolio/websites" className={styles.item}>
-          <span className={styles.title}>Websites</span>
+        <Link
+          href="/portfolio/websites"
+          className="border-[#53c28b] rounded-lg bg-cover bg-[url('/websites.jpg')] h-full w-full opacity-70"
+        >
+          <span className=" flex justify-center items-center text-5xl text-[#53c28b] font-bold underline decoration-4">
+            Websites
+          </span>
         </Link>
-        <Link href="/portfolio/applications" className={styles.item}>
-          <span className={styles.title}>Application</span>
+        <Link
+          href="/portfolio/applications"
+          className="border-[#53c28b] rounded-lg  bg-cover bg-[url('/apps.jpg')] h-full w-full opacity-70"
+        >
+          <span className=" flex justify-center items-center text-5xl text-[#53c28b] font-bold underline decoration-4">
+            Application
+          </span>
         </Link>
       </div>
     </div>
