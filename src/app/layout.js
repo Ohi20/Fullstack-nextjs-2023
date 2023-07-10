@@ -1,7 +1,8 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Footer from '../components/Footer/Footer';
-import Navbar from '../components/Navbar/Navbar';
+// import Navbar from '../components/Navbar/Navbar';
+import Navbar2 from '../components/Navbar/Navbar2';
 import { ThemeProvider } from '../context/ThemeContext';
 import AuthProvider from '../components/AuthProvider/AuthProvider.jsx';
 
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <AuthProvider>
             <div className="container">
-              <Navbar />
+              <Navbar2 />
               {children}
               <Footer />
             </div>

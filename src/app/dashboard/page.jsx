@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Loading from 'src/components/Loading/Loading.jsx';
 
 const Dashboard = () => {
   // const [data, setData] = useState([]);
@@ -43,7 +44,7 @@ const Dashboard = () => {
   );
 
   if (session.status === 'loading') {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   if (session.status === 'unauthenticated') {

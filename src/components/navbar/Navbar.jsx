@@ -44,9 +44,13 @@ const Navbar = () => {
   const session = useSession();
 
   return (
-    <div className={styles.container}>
-      <Image src={logo} alt="hero" className={styles.img} />
-      <div className={styles.links}>
+    <div className="h-[100px] flex justify-between items-center">
+      <Image
+        src={logo}
+        alt="hero"
+        className="h-[120px] w-[120px] object-contain"
+      />
+      <div className="flex items-center gap-8 text-[#53c28b] font-medium">
         <DarkModeToggle />
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>
@@ -54,7 +58,10 @@ const Navbar = () => {
           </Link>
         ))}
         {session.status === 'authenticated' && (
-          <button className={styles.logout} onClick={signOut}>
+          <button
+            className="p-1 outline-none bg-[#53c28b] text-white pointer rounded hover:text-black"
+            onClick={signOut}
+          >
             Logout
           </button>
         )}
