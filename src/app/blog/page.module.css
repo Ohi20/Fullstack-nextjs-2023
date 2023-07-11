@@ -1,44 +1,44 @@
-.container {
+/* .container {
   display: flex;
   align-items: center;
   gap: 50px;
   margin-bottom: 50px;
-}
+} */
 
-.blogButton {
+/* .blogButton {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
+} */
+/* 
 .img {
   object-fit: cover;
-}
+} */
 
-.title {
+/* .title {
   margin-bottom: 10px;
   color: #53c28b;
-}
+} */
 
-.desc {
+/* .desc {
   font-size: 18px;
   color: #999;
   font-weight: 400;
-}
+} */
 
-.contentBox {
+/* .contentBox {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+} */
 
-.username {
+/* .username {
   font-size: 20px;
   font-weight: 600;
-}
+} */
 
-.createdAt {
+/* .createdAt {
   font-weight: 600;
-}
+} */

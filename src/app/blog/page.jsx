@@ -20,32 +20,33 @@ const Blog = async () => {
   const data = await getData();
 
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.blogButton}>
+    <div className="flex flex-col justify-center items-center my-8">
+      <div className="flex justify-center items-center my-8">
         <Button url="/dashboard" text="Share Your Post" />
       </div>
       {data.map((item) => (
         <Link
           href={`/blog/${item._id}`}
-          className={styles.container}
+          className="flex flex-col justify-center items-center border border-[#bbb] rounded-lg p-8 my-8"
           key={item.id}
         >
-          <div className={styles.imgContainer}>
+          <div className="h-auto w-auto">
             <Image
               src={item.img}
               alt=""
-              width={400}
-              height={250}
-              className={styles.img}
+              width={600}
+              height={400}
+              className="object-cover"
             />
           </div>
-          <div className={styles.contentBox}>
+
+          <div className="flex flex-col gap-3">
             <div className={styles.content}>
-              <h1 className={styles.title}>{item.title}</h1>
-              <p className={styles.desc}>{item.desc}</p>
+              <h1 className="mb-8 text-2xl text-[#53c28b]">{item.title}</h1>
+              <p className="text-2xl text-[#999] font-medium">{item.desc}</p>
             </div>
-            <h1 className={styles.username}>Author: {item.username}</h1>
-            <p className={styles.createdAt}>Created: {item.createdAt}</p>
+            <h1 className="text-xl font-semibold">Author: {item.username}</h1>
+            <p className="font-semibold">Created: {item.createdAt}</p>
           </div>
         </Link>
       ))}
