@@ -1,40 +1,40 @@
-.container {
+/* .container {
   display: flex;
   gap: 100px;
-}
+} */
 
-.posts {
+/* .posts {
   flex: 1;
-}
+} */
 
-.post {
+/* .post {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px 0px;
-}
+} */
 
-.imgContainer {
+/* .imgContainer {
   width: 200px;
   height: 100px;
-  position: Ū;
-}
+  position: relative;
+} */
 
-.img {
+/* .img {
   object-fit: cover;
-}
+} */
 
-.delete {
+/* .delete {
   cursor: pointer;
   color: red;
-}
+} */
 
-.new {
+/* .new {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+} */
 
 .input,
 .textArea {

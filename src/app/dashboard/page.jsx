@@ -92,28 +92,9 @@ const Dashboard = () => {
 
   if (session.status === 'authenticated') {
     return (
-      <div className={styles.container}>
-        <div className={styles.posts}>
-          {isLoading
-            ? 'loading'
-            : data?.map((post) => (
-                <div className={styles.post} key={post._id}>
-                  <div className={styles.imgContainer}>
-                    <Image src={post.img} alt="" width={200} height={100} />
-                  </div>
-                  <h2 className={styles.postTitle}>{post.title}</h2>
-                  <span
-                    className={styles.delete}
-                    onClick={() => handleDelete(post._id)}
-                    onMouseEnter={handleShow}
-                  >
-                    <abbr title="Delete This Post">X</abbr>
-                  </span>
-                </div>
-              ))}
-        </div>
-        <form className={styles.new} onSubmit={handleSubmit}>
-          <h1>Add New Post</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
+        <form className="flex-1 flex flex-col gap-6" onSubmit={handleSubmit}>
+          <h1 className="text-xl text-center text-[#53c28b]">Add New Post</h1>
           <input type="text" placeholder="Title" className={styles.input} />
           <input type="text" placeholder="Desc" className={styles.input} />
           <input type="text" placeholder="Image" className={styles.input} />
@@ -123,8 +104,50 @@ const Dashboard = () => {
             cols="30"
             rows="10"
           ></textarea>
-          <button className={styles.button}>Post</button>
+          <button className="bg-[#52c28b] p-4 mx-auto rounded-md border-none text-[#eee]">
+            Post
+          </button>
         </form>
+
+        <div className="flex-1">
+          <h1 className="text-5xl text-[#53c28b] text-center">Your Posts</h1>
+          {isLoading
+            ? 'loading'
+            : data?.map((post) => (
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-10 border border-[#bbb] p-10"
+                  key={post._id}
+                >
+                  {/* 1st */}
+                  <div>
+                    <p className="text-center">{post.username}</p>
+                  </div>
+
+                  {/* 2nd */}
+                  <div className="w-full h-full flex justify-center items-center">
+                    <Image
+                      className="object-cover"
+                      src={post.img}
+                      alt=""
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+
+                  {/* 3rd */}
+                  {/* <h2 className="text-center text-xl">{post.title}</h2> */}
+
+                  {/* 4th */}
+                  <span
+                    className="text-center cursor-pointer text-red-600"
+                    onClick={() => handleDelete(post._id)}
+                    onMouseEnter={handleShow}
+                  >
+                    <abbr title="Delete This Post">Delete</abbr>
+                  </span>
+                </div>
+              ))}
+        </div>
       </div>
     );
   }
