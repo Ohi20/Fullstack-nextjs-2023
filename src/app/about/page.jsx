@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './page.module.css';
 import Image from 'next/image';
 import Button from '../../components/Button/Button';
 import illustration from 'public/illustration.jpg';
@@ -15,10 +14,8 @@ const About = () => {
           className="object-cover sepia"
         />
         <div className="absolute bottom-4 left-4 p-4 bg-[#53c28b] text-white">
-          <h1 className={styles.imgTitle}>Digital Storytellers</h1>
-          <h2 className={styles.imgDesc}>
-            Handcrafting award winning digital experiences
-          </h2>
+          <h1 className="">Digital Storytellers</h1>
+          <h2 className="">Handcrafting award winning digital experiences</h2>
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-10">

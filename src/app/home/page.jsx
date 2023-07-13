@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from 'public/hero.png';
 import Button from 'src/components/Button/Button.jsx';
 import Image from 'next/image';
-// import styles from './page.module.css';
 
 const HomePage = () => {
   return (
@@ -21,11 +20,11 @@ const HomePage = () => {
           <Button url="/portfolio" text="See Our Works" />
         </div>
       </div>
-      <div className="flex-1 flex flex-col justify-center items-center gap-4">
+      <div className="flex-1 flex flex-col justify-center items-center gap-4 animate-bounce duration-75">
         <Image
           src={Hero}
           alt="hero"
-          className="object-contain h-auto w-auto transition duration-150 ease-out hover:ease-in"
+          className="object-cover h-auto w-auto mt-10"
         />
       </div>
     </div>

@@ -46,12 +46,12 @@ const Navbar2 = () => {
       {/* Links container */}
       <div
         className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto gap-8 ${
-          isOpen ? 'block' : 'hidden'
+          isOpen ? 'block border border-1 p-2 lg:border-none' : 'hidden'
         }`}
       >
         <DarkModeToggle />
 
-        <div className="text-sm text-[#53c28b] font-medium lg:flex-grow">
+        <div className="text-sm gap-4 text-[#53c28b] font-medium lg:flex-grow">
           <Link
             href="/"
             className="block mt-4 lg:inline-block lg:mt-0 lg:text-xl mr-4"
@@ -90,7 +90,7 @@ const Navbar2 = () => {
           </Link>
           {session.status === 'authenticated' && (
             <button
-              className="p-1 outline-none bg-[#53c28b] text-white pointer rounded hover:text-black"
+              className="p-1 outline-none bg-[#53c28b] text-white pointer rounded hover:text-black my-2"
               onClick={signOut}
             >
               Logout

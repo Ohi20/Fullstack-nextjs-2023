@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './button.module.css';
 import Link from 'next/link';
 
 const Button = ({ text, url }) => {
   return (
     <Link href={url}>
-      <button className={styles.container}>{text}</button>
+      <button className="p-3 cursor-pointer bg-[#53c28b] border-none rounded-md text-black">
+        {text}
+      </button>
     </Link>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from 'src/components/Button/Button.jsx';
@@ -41,7 +40,7 @@ const Blog = async () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <div className={styles.content}>
+            <div className="">
               <h1 className="mb-8 text-2xl text-[#53c28b]">{item.title}</h1>
               <p className="text-2xl text-[#999] font-medium">{item.desc}</p>
             </div>
