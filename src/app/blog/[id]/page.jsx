@@ -30,9 +30,11 @@ const BlogPost = async ({ params }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Info */}
         <div className="flex flex-col justify-between gap-4">
-          <h1 className="text-3xl text-[#53c28b]">{data.title}</h1>
+          <h1 className="text-3xl font-bold text-[#53c28b]">{data.title}</h1>
           <span className="font-semibold my-4">Description</span>
-          <p className="text-xl font-light text-justify">{data.desc}</p>
+          <p className="text-xl dark:text-[#bbb] light:text-black font-medium text-justify">
+            {data.desc}
+          </p>
           <div className="flex gap-6 items-center my-2">
             <Image
               src="https://e7.pngegg.com/pngimages/99/489/png-clipart-computer-icons-user-profile-user-cdr-face.png"
@@ -55,7 +57,7 @@ const BlogPost = async ({ params }) => {
           />
         </div>
       </div>
-      <div className="my-6 text-[#999]">
+      <div className="my-6 dark:text-[#bbb] light:text-black">
         <span className="my-4 font-bold">Content</span>
         <p className="text-justify font-medium text-xl">{data.content}</p>
       </div>

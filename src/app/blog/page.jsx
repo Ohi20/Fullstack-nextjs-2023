@@ -41,8 +41,12 @@ const Blog = async () => {
 
           <div className="flex flex-col gap-3">
             <div className="">
-              <h1 className="mb-8 text-2xl text-[#53c28b]">{item.title}</h1>
-              <p className="text-2xl text-[#999] font-medium">{item.desc}</p>
+              <h1 className="my-3 text-2xl text-[#53c28b] font-semibold">
+                {item.title}
+              </h1>
+              <p className="text-2xl dark:text-[#bbb] light:text-black font-medium">
+                {item.desc}
+              </p>
             </div>
             <h1 className="text-xl font-semibold">Author: {item.username}</h1>
             <p className="font-semibold">Created: {item.createdAt}</p>

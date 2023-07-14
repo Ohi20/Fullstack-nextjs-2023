@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import styles from './page.module.css';
 import useSWR from 'swr';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -94,13 +93,27 @@ const Dashboard = () => {
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10">
         <form className="flex-1 flex flex-col gap-6" onSubmit={handleSubmit}>
-          <h1 className="text-xl text-center text-[#53c28b]">Add New Post</h1>
-          <input type="text" placeholder="Title" className={styles.input} />
-          <input type="text" placeholder="Desc" className={styles.input} />
-          <input type="text" placeholder="Image" className={styles.input} />
+          <h1 className="text-2xl text-center text-[#53c28b] font-semibold">
+            Add New Post
+          </h1>
+          <input
+            type="text"
+            placeholder="Title"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
+          />
+          <input
+            type="text"
+            placeholder="Desc"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
+          />
+          <input
+            type="text"
+            placeholder="Image"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
+          />
           <textarea
             placeholder="Content"
-            className={styles.textArea}
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
             cols="30"
             rows="10"
           ></textarea>

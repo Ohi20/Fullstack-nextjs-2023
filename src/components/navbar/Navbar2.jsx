@@ -51,7 +51,7 @@ const Navbar2 = () => {
       >
         <DarkModeToggle />
 
-        <div className="text-sm gap-4 text-[#53c28b] font-medium lg:flex-grow">
+        <div className="text-sm gap-4 text-[#53c28b] font-bold lg:font-medium lg:flex-grow">
           <Link
             href="/"
             className="block mt-4 lg:inline-block lg:mt-0 lg:text-xl mr-4"

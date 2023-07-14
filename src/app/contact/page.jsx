@@ -28,16 +28,16 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="name"
-            className="p-4 bg-transparent text-[#bbb] border border-[#bbb] text-sm font-semibold"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
           ></input>
           <input
             type="email"
             name="email"
             placeholder="email"
-            className="p-4 bg-transparent text-[#bbb] border border-[#bbb] text-sm font-semibold"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
           ></input>
           <textarea
-            className="p-4 bg-transparent text-[#bbb] border border-[#bbb] text-sm font-semibold"
+            className="p-4 bg-transparent dark:text-[#bbb] light:text-black border border-[#bbb] dark:border-[#bbb] light:border-[#111] text-sm font-semibold"
             placeholder="message"
             name="message"
             cols="30"
