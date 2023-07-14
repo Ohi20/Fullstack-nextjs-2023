@@ -6,7 +6,7 @@ import logo from 'public/logo.png';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import { signOut, useSession } from 'next-auth/react';
 
-const Navbar2 = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const session = useSession();
   return (
@@ -102,4 +102,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar;
